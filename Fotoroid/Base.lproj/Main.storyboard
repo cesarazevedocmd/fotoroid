@@ -102,11 +102,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-rL-2eb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="c0l-K7-rut">
+                                        <rect key="frame" x="188.5" y="385.5" width="37" height="37"/>
+                                        <color key="color" red="0.86841338869999996" green="0.83665674919999999" blue="0.35281395910000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="c0l-K7-rut" firstAttribute="centerY" secondItem="dMb-rL-2eb" secondAttribute="centerY" id="9j5-wV-zHJ"/>
+                                    <constraint firstItem="c0l-K7-rut" firstAttribute="centerX" secondItem="dMb-rL-2eb" secondAttribute="centerX" id="Vgb-zB-kB0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aLj-Pf-HGq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dMb-rL-2eb" secondAttribute="bottom" id="2hw-qw-ASg"/>
+                            <constraint firstItem="dMb-rL-2eb" firstAttribute="leading" secondItem="aLj-Pf-HGq" secondAttribute="leading" id="3zj-FS-zRh"/>
+                            <constraint firstItem="dMb-rL-2eb" firstAttribute="trailing" secondItem="aLj-Pf-HGq" secondAttribute="trailing" id="A7V-1G-1OX"/>
                             <constraint firstItem="oK1-BL-ypF" firstAttribute="top" secondItem="aLj-Pf-HGq" secondAttribute="top" constant="30" id="DjL-Ph-6ZA"/>
+                            <constraint firstItem="dMb-rL-2eb" firstAttribute="top" secondItem="aLj-Pf-HGq" secondAttribute="top" id="LOV-mB-db9"/>
                             <constraint firstItem="aLj-Pf-HGq" firstAttribute="trailing" secondItem="TU4-l8-G8a" secondAttribute="trailing" constant="20" id="NJN-Qc-NaQ"/>
                             <constraint firstItem="oK1-BL-ypF" firstAttribute="leading" secondItem="aLj-Pf-HGq" secondAttribute="leading" constant="20" id="ZbF-8u-D5b"/>
                             <constraint firstItem="TU4-l8-G8a" firstAttribute="top" secondItem="oK1-BL-ypF" secondAttribute="bottom" constant="30" id="a9k-w2-elI"/>
@@ -125,6 +143,7 @@
                     <connections>
                         <outlet property="collectionView" destination="TU4-l8-G8a" id="elh-qV-xIH"/>
                         <outlet property="ivPhoto" destination="oK1-BL-ypF" id="sMv-pW-vhd"/>
+                        <outlet property="viLoading" destination="dMb-rL-2eb" id="qzM-9k-31K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjO-Gf-Aev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

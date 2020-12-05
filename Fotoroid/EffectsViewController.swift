@@ -11,7 +11,8 @@ class EffectsViewController: UIViewController {
     
     @IBOutlet weak var ivPhoto: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var viLoading: UIView!
+    
     var image: UIImage!
     lazy var filterManager: FilterManager = {
         let filterManager = FilterManager(image: image)
@@ -25,8 +26,19 @@ class EffectsViewController: UIViewController {
         ivPhoto.image = image
     }
     
+    func showLoading(_ show: Bool){
+        viLoading.isHidden = !show
+    }
+    
     func applyPhotoEffect(with filterType: FilterType){
-        ivPhoto.image = filterManager.applyFilter(type: filterType)
+        showLoading(true)
+        DispatchQueue.global(qos: .userInitiated).async {
+            let filterApplied = self.filterManager.applyFilter(type: filterType)
+            DispatchQueue.main.async {
+                self.ivPhoto.image = filterApplied
+                self.showLoading(false)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

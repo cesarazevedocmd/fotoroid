@@ -15,6 +15,7 @@
 		8D253838257BC662002EA15C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D253836257BC662002EA15C /* LaunchScreen.storyboard */; };
 		8D253842257BCF55002EA15C /* EffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D253841257BCF55002EA15C /* EffectsViewController.swift */; };
 		8D253845257BCF9F002EA15C /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D253844257BCF9F002EA15C /* FinalViewController.swift */; };
+		8D253848257BE011002EA15C /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D253847257BE011002EA15C /* FilterManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8D253839257BC662002EA15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D253841257BCF55002EA15C /* EffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsViewController.swift; sourceTree = "<group>"; };
 		8D253844257BCF9F002EA15C /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		8D253847257BE011002EA15C /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8D25382B257BC660002EA15C /* AppDelegate.swift */,
 				8D25382D257BC660002EA15C /* SceneDelegate.swift */,
 				8D25382F257BC660002EA15C /* ViewController.swift */,
+				8D253847257BE011002EA15C /* FilterManager.swift */,
 				8D253831257BC660002EA15C /* Main.storyboard */,
 				8D253844257BCF9F002EA15C /* FinalViewController.swift */,
 				8D253841257BCF55002EA15C /* EffectsViewController.swift */,
@@ -148,6 +151,7 @@
 				8D253842257BCF55002EA15C /* EffectsViewController.swift in Sources */,
 				8D25382C257BC660002EA15C /* AppDelegate.swift in Sources */,
 				8D25382E257BC660002EA15C /* SceneDelegate.swift in Sources */,
+				8D253848257BE011002EA15C /* FilterManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

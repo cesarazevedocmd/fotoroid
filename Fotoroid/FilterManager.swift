@@ -13,8 +13,10 @@ enum FilterType: Int {
     case sepia
     case halftone
     case crystallize
-    case vingnette
+    case vignette
     case noir
+    
+    static let allValues = ["comic", "sepia", "halftone", "crystallize", "vignette", "noir"]
 }
 
 class FilterManager {
@@ -24,7 +26,7 @@ class FilterManager {
     let filterName = [
         "CIComicEffect",
         "CISepiaTone",
-        "CICMYHalftone",
+        "CICMYKHalftone",
         "CICrystallize",
         "CIVignette",
         "CIPhotoEffectNoir"]
@@ -35,7 +37,7 @@ class FilterManager {
     
     func applyFilter(type: FilterType) -> UIImage {
         let ciImage = CIImage(image: originalImage)!
-        let filter = CIFilter(name: filterName[type.hashValue])!
+        let filter = CIFilter(name: filterName[type.rawValue])!
         filter.setValue(ciImage, forKey: kCIInputImageKey)
         switch type {
             case .comic:
@@ -46,7 +48,7 @@ class FilterManager {
                 filter.setValue(25, forKey: kCIInputWidthKey)
             case .crystallize:
                 filter.setValue(25, forKey: kCIInputRadiusKey)
-            case .vingnette:
+            case .vignette:
                 filter.setValue(3, forKey: kCIInputIntensityKey)
                 filter.setValue(30, forKey: kCIInputRadiusKey)
             case .noir:
